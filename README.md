@@ -6,7 +6,20 @@ It has several advantages over other Version Control System that you can learn o
 
 - Intuitive and flexible CLI.
 - Managing multiple diverging branch is totally built-in and encouraged.
-- Having separate Staging and Head areas makes de workflow much more flexible. Checkout this [nice docs][1] about them.
+- Having separate Staging and Head areas makes the workflow much more flexible. Checkout this [nice docs][1] about them.
+
+## Intro
+
+This is a simple guideline of how to work with Git.
+There's tons of tutorials and docs in the web so if you are new to Git you should
+follow them in order to understand this properly:
+
+- [Interactive Git tutorial in 15 minutes](https://try.github.io/levels/1/challenges/1)
+- [Official Git Tutorial](http://git-scm.com/docs/gittutorial)
+- [Extensive git interactive tutorial](http://gitimmersion.com/lab_01.html)
+- [Atlassian Git tutorial](https://www.atlassian.com/git/tutorial)
+- [Docs about Three Git trees: File System, Index and HEAD](http://git-scm.com/blog/2011/07/11/reset.html)
+
 
 ## Set up
 
@@ -100,7 +113,7 @@ This process may through **Merge Conflicts** that you'll need
 to resolve manually and then run:
 ```bash
 git add file1 file2 ...
-git commit -m "merge with master
+git commit -m "merge with master"
 ```
 
 The go to your Remote Repository web interface (Github, Bitbucket) and submit a Pull Request
@@ -112,11 +125,21 @@ and delete `feature_a` branch with `git branch -d feature_a` (this can be done t
 
 ## Frequency
 
-`git commit` should be done as frequent as you can do it. Maybe one for each time you change a file.
-`git push` should be done a few times a day or maybe only one.
+- `git commit` should be done as frequent as you can do it. Maybe one for each time you change a file.
+- `git push` should be done a few times a day or maybe only one.
 
 
 Now you have a working
+
+## Dictionary
+
+- `master branch`: It refers to the main code base branch by default.
+- `Local Repository`: when you work with git you always have a Local Repository. `git add`, `git commit`, etc, are all executed in the context of a Local Repository.
+- `Remote Repository`: Most common are Github and Bitbucket but they are not the only out there. You should always save your latest changes into the Remote. Think of it as a Safe Zone for your code.
+- `Index` or `Staging Area`: Part of Git Three Trees. When you run `git add file` you are moving `file` to the `Index`. Its just an intermediate Saving area.
+- `HEAD`: Part of Git Three Trees. When you run `git commit -m "msg"`, you are moving all files in `Index` into `HEAD`. Files in `HEAD` are saved in your `Local Repository`.
+
+
 
 
 
